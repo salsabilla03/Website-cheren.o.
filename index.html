@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Happy Birthday</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Playfair Display', serif;
+    }
+
+    body {
+      background: #000;
+      color: white;
+      overflow-x: hidden;
+    }
+
+    /* HERO SECTION */
+    .hero {
+      height: 100vh;
+      background: url("img_2.jpeg") center/cover no-repeat;
+      position: relative;
+      display: flex;
+      align-items: center;
+      padding: 60px;
+    }
+
+    .hero::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: rgba(0,0,0,0.4);
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 2;
+    }
+
+    .hero h1 {
+      font-size: 60px;
+      letter-spacing: 3px;
+    }
+
+    .hero h2 {
+      font-size: 120px;
+      font-weight: 300;
+      position: absolute;
+      right: 80px;
+      top: 100px;
+      opacity: 0.8;
+    }
+
+    .date {
+      margin-top: 20px;
+      font-size: 14px;
+      opacity: 0.7;
+    }
+
+    /* COLLAGE SECTION */
+    .collage {
+      position: relative;
+      padding: 100px 50px;
+      background: #111;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+      gap: 10px;
+      opacity: 0.7;
+    }
+
+    .grid img {
+      width: 100%;
+      height: 150px;
+      object-fit: cover;
+    }
+
+    .overlay-text {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      font-size: 60px;
+      text-align: center;
+      color: white;
+      pointer-events: none;
+    }
+
+    .overlay-text span {
+      font-size: 120px;
+      display: block;
+    }
+
+    @media(max-width: 768px) {
+      .hero h1 {
+        font-size: 40px;
+      }
+
+      .hero h2 {
+        font-size: 70px;
+        right: 30px;
+      }
+
+      .overlay-text {
+        font-size: 30px;
+      }
+
+      .overlay-text span {
+        font-size: 70px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-content">
+    <h1>HAPPY<br>BIRTHDAY!</h1>
+    <div class="date">Maret 18, 2026</div>
+  </div>
+  <h2>19th</h2>
+</section>
+
+<!-- COLLAGE -->
+<section class="collage">
+  <div class="grid">
+    <img src="img_1.jpeg">
+    <img src="img_2.jpeg">
+    <img src="img_3.jpeg">
+    <img src="img_4.jpeg">
+    <img src="img_5.jpeg">
+    <img src="img_6.jpeg">
+    <img src="img_7.jpeg">
+    <img src="img_8.jpeg">
+    <img src="img_9.jpeg">
+    <img src="img_10.jpeg">
+    <img src="img_11.jpeg">
+    <img src="img_12.jpeg">
+    <img src="img_13.jpeg">
+    <img src="img_14.jpeg">
+    <img src="img_1.jpeg">
+    <img src="img_3.jpeg">
+    <img src="img_12.jpeg">
+    <img src="img_7.jpeg">
+    <img src="img_14.jpeg">
+    <img src="img_5.jpeg">
+    <img src="img_10.jpeg">
+
+  </div>
+
+  <div class="overlay-text">
+    3 things you get when you turn
+    <span>19</span>
+  </div>
+</section>
+
+<!-- SECTION 3 -->
+<section class="message" style="
+  padding:100px 50px;
+  background: url('beground\ hitam.jpg') center/cover no-repeat;
+  text-align:center;
+  position:relative;
+  color:white;
+">
+
+  <!-- overlay biar teks tetap kebaca -->
+  <div style="
+    position:absolute;
+    inset:0;
+    background: rgba(0,0,0,0.6);
+  "></div>
+
+  <div style="position:relative; z-index:2;">
+    <h1 style="font-size:50px; margin-bottom:20px;">For You</h1>
+    <p style="max-width:600px; margin:auto; opacity:0.8; line-height:1.6;">
+      Hari ini bukan cuma tentang umur yang bertambah, tapi tentang semua cerita yang sudah kamu lewati.
+      Tetap jadi diri kamu yang luar biasa.
+    </p>
+  </div>
+
+</section>
+
+<!-- SECTION 4 -->
+<section class="memory" style="padding:100px 50px; background:#111;">
+  <h1 style="text-align:center; font-size:50px; margin-bottom:40px;">Best Moments</h1>
+  <div style="display:flex; gap:20px; flex-wrap:wrap; justify-content:center;">
+    <img src="img_3.jpeg" style="width:250px; height:300px; object-fit:cover;">
+    <img src="img_4.jpeg" style="width:250px; height:300px; object-fit:cover;">
+    <img src="img_5.jpeg" style="width:250px; height:300px; object-fit:cover;">
+  </div>
+</section>
+
+<!-- Tambahkan ini di <head> -->
+<script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+
+<script>
+  (function(){
+    emailjs.init("417qQQhiMHtFjRsPB"); // ganti ini
+  })();
+</script>
+
+<!-- EmailJS -->
+<script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+<script>
+  (function(){
+    emailjs.init("417qQQhiMHtFjRsPB");
+  })();
+</script>
+
+<!-- SECTION 5 -->
+<section class="wish" style="
+  padding:100px 20px;
+  background:linear-gradient(135deg,#000,#1a1a1a);
+  text-align:center;
+  color:white;
+  font-family:sans-serif;
+">
+  
+  <h1 style="font-size:50px; margin-bottom:10px;">
+    Quiz Spesial Ultah 🎂
+  </h1>
+  <p style="opacity:0.6; margin-bottom:40px;">
+    Isi dengan jujur yaa 💭
+  </p>
+
+  <div style="
+    max-width:600px;
+    margin:auto;
+    text-align:left;
+    background:rgba(255,255,255,0.05);
+    padding:30px;
+    border-radius:20px;
+    backdrop-filter:blur(10px);
+  ">
+
+    <form id="quizForm">
+
+      <!-- Input Style -->
+      <style>
+        textarea {
+          width:100%;
+          height:90px;
+          margin:10px 0 25px;
+          padding:12px;
+          border-radius:12px;
+          border:none;
+          outline:none;
+          background:#111;
+          color:white;
+          transition:0.3s;
+        }
+        textarea:focus {
+          box-shadow:0 0 10px rgba(255,255,255,0.3);
+        }
+        button {
+          width:100%;
+          padding:14px;
+          border:none;
+          border-radius:30px;
+          background:linear-gradient(45deg,#ff7eb3,#ff758c);
+          color:white;
+          font-size:16px;
+          cursor:pointer;
+          transition:0.3s;
+        }
+        button:hover {
+          transform:scale(1.05);
+          box-shadow:0 0 20px rgba(255,118,150,0.6);
+        }
+      </style>
+
+      <label>Apa arti umur 19 buat kamu?</label>
+      <textarea id="q1" required></textarea>
+
+      <label>Apa yang paling kamu harapkan di umur ini?</label>
+      <textarea id="q2" required></textarea>
+
+      <label>Hal apa yang ingin kamu capai tahun ini?</label>
+      <textarea id="q3" required></textarea>
+
+      <label>Pesan untuk diri sendiri di masa depan?</label>
+      <textarea id="q4" required></textarea>
+
+      <button type="submit">Kirim Jawaban ✨</button>
+
+    </form>
+
+    <!-- Success Message -->
+    <div id="successMessage" style="
+      opacity:0;
+      transform:translateY(20px);
+      transition:0.6s;
+      margin-top:30px;
+      text-align:center;
+      font-size:22px;
+    ">
+      🎉 Jawaban terkirim!<br>
+      Semoga semua harapan kamu tercapai 💖
+    </div>
+
+  </div>
+
+</section>
+
+<script>
+document.getElementById("quizForm").addEventListener("submit", function(e){
+  e.preventDefault();
+
+  emailjs.send("YOUR_SERVICE_ID","YOUR_TEMPLATE_ID",{
+    q1: document.getElementById("q1").value,
+    q2: document.getElementById("q2").value,
+    q3: document.getElementById("q3").value,
+    q4: document.getElementById("q4").value
+  })
+  .then(function(){
+
+    const form = document.getElementById("quizForm");
+    const message = document.getElementById("successMessage");
+
+    form.style.opacity = "0";
+
+    setTimeout(()=>{
+      form.style.display = "none";
+      message.style.opacity = "1";
+      message.style.transform = "translateY(0)";
+    },500);
+
+  }, function(error){
+    alert("Gagal kirim 😢");
+  });
+});
+</script>
+
+<script>
+  function jawab(pilihan) {
+    let text = "";
+
+    if(pilihan === 'A'){
+      text = "Apa pencapaian terbesarmu tahun ini yang paling membuatmu bangga?";
+    } else if(pilihan === 'B'){
+      text = "Semoga semua mimpi kamu satu per satu jadi nyata 🚀";
+    } else if(pilihan === 'C'){
+      text = "Semoga orang-orang tersayang selalu ada di sekitarmu ❤️";
+    }
+
+    document.getElementById("hasil").innerHTML = text;
+  }
+</script>
+
+<!-- SECTION 6 -->
+<section class="wish" style="padding:100px 50px; background:#000; color:white;">
+  
+  <div style="display:flex; align-items:center; justify-content:center; gap:50px; flex-wrap:wrap;">
+
+    <!-- Text -->
+    <div style="max-width:500px; text-align:left;">
+      <h1 style="font-size:50px; margin-bottom:20px;">MOtivation For You</h1>
+      <p style="opacity:0.7; line-height:1.6;">
+      "Selamat ulang tahun yang ke-19. Di usia ini, dunia mungkin mulai menuntutmu untuk terlihat kuat, mandiri, dan seolah tahu segalanya. Namun, ingatlah satu hal penting: kekuatan sejati tidak lahir dari diamnya sebuah beban, melainkan dari keberanian untuk membagikannya.
+Jangan pernah takut untuk bercerita. Jangan biarkan pikiranmu menjadi penjara bagi kecemasanmu sendiri. Di usia 19 ini, belajarlah bahwa suaramu adalah alat penyembuh yang paling ampuh.
+-Berceritalah saat kamu lelah, karena dunia tidak akan runtuh hanya karena kamu mengaku tidak sedang baik-baik saja.
+-Berceritalah saat kamu bingung, karena sudut pandang orang lain bisa jadi lampu di lorong gelapmu.
+-Berceritalah saat kamu bahagia, agar energi positifmu bisa memeluk orang-orang di sekitarmu.
+Menyimpan segalanya sendirian hanya akan membuat pundakmu lelah sebelum waktunya. Temukan orang-orang yang tepat—mereka yang mendengarkan tanpa menghakimi—dan biarkan hatimu bernapas melalui kata-kata. Ingat, kamu tidak harus menempuh perjalanan ini sendirian.
+Semoga di usia 19 ini, kamu semakin berani jujur pada diri sendiri, semakin terbuka pada dunia, dan selalu dikelilingi oleh telinga yang siap mendengar serta hati yang siap mendekap. Teruslah tumbuh, teruslah bersuara!"
+      </p>
+    </div>
+
+ <!-- Image -->
+<div>
+  <img src="frame tsr.png" alt="foto"
+    style="
+      width:400px;
+      height:auto;
+      filter: drop-shadow(0 10px 25px rgba(255,255,255,0.4));
+    ">
+</div>
+</section>
+
+<!-- SECTION 7 -->
+<section class="closing" style="height:100vh; display:flex; align-items:center; justify-content:center; background:url('img_1.jpeg') center/cover no-repeat; position:relative;">
+  
+  <div style="position:absolute; inset:0; background:rgba(0,0,0,0.6);"></div>
+  
+  <h1 style="position:relative; font-size:70px; text-align:center; line-height:1.3;">
+    HAPPY BIRTHDAY<br>
+    <span style="font-size:40px;">[Cheren Olivia Widya Anggelika]</span><br>
+    19th 🎂
+  </h1>
+
+</section>
+</body>
+</html>
